@@ -1,0 +1,746 @@
+@charset "UTF-8";
+/*Paleta de colores*/
+/*TAMAÑO DE LAS FUNTES*/
+/*TAMAÑO DE MARGENES*/
+/*Breackpoints*/
+/*MIXINS*/
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+}
+
+/*HEADER*/
+.cabecera .navbar {
+  background-color: #F7F5EA;
+  justify-content: flex-start;
+}
+.cabecera .logo-header {
+  height: 2rem;
+}
+.cabecera .navbar-toggler {
+  color: #F7F5EA;
+  border: none;
+}
+.cabecera .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2870, 88, 165, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.cabecera .container-fluid {
+  background-color: #F7F5EA;
+}
+.cabecera .offcanvas-header {
+  background-color: #F7F5EA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #4658a5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+.cabecera .offcanvas-header img {
+  height: 6rem;
+}
+.cabecera .btn-close {
+  margin-left: 240px;
+  background-color: #06ab78;
+}
+.cabecera .offcanvas-body {
+  background-color: #F7F5EA;
+}
+.cabecera .navbar-nav .nav-link.active {
+  color: #06ab78;
+}
+.cabecera .navbar-nav .nav-link.active li {
+  margin-bottom: -5px;
+}
+.cabecera .nav-link {
+  color: #4658a5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+/*Items nav seccion inicio / alimentacion*/
+.nav_huellitas ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 2rem;
+  padding-left: 0;
+}
+.nav_huellitas ul img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(70, 88, 165, 0.1);
+  transition: 0.2s;
+}
+.nav_huellitas ul li {
+  list-style: none;
+  height: 50px;
+  width: 50px;
+}
+
+.nav_huellitas img:hover {
+  box-shadow: 0 0 0 7px rgba(70, 88, 165, 0.3);
+}
+
+/*PORTADA Razas|Cuidados|Alimentacion|Adoptame*/
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4658a5;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.text_portada {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#grilla_banner {
+  display: grid;
+  grid-template-areas: "titulo" "text_portada" "img_portada" "img_portada" "img_portada" "img_portada";
+  grid-template-rows: 50px auto 75px;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+}
+
+.titulo {
+  grid-area: titulo;
+}
+
+.text_portada {
+  grid-area: text_portada;
+}
+
+.img_portada {
+  grid-area: img_portada;
+}
+
+/*FOOTER*/
+footer {
+  margin-top: 20px;
+}
+
+#accordionExample .accordion-button {
+  font-weight: 500;
+  color: #4658a5;
+}
+#accordionExample .nav_footer li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #4658a5;
+}
+#accordionExample .nav_footer li a {
+  text-decoration: none;
+  color: #4658a5;
+}
+#accordionExample .accordion-collapse {
+  padding-top: 10px;
+  padding-left: 25px;
+}
+#accordionExample .accordion-body img {
+  height: 50px;
+}
+
+.redes_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  gap: 20px;
+}
+.redes_footer img {
+  width: 2.5rem;
+}
+
+/*MEDIAS - MOBILE*/
+@media (min-width: 425px) {
+  .navbar-nav li {
+    margin-bottom: -10px;
+  }
+  .btn-close {
+    margin-left: 400px;
+    background-color: #60A97A;
+  }
+  .nav_huellitas ul {
+    gap: 35px;
+  }
+  .nav-item {
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-nav li {
+    margin-bottom: -30px;
+  }
+  .btn-close {
+    margin-left: 400px;
+    background-color: #60A97A;
+  }
+  .nav_huellitas ul {
+    gap: 70px;
+  }
+  .nav-item {
+    height: 80px;
+    width: 80px;
+  }
+  /*media razas*/
+  #grilla_banner {
+    grid-template-areas: "titulo img_portada" "text_portada img_portada" "text_portada img_portada";
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+  }
+  .img_portada {
+    padding-top: 10px;
+    height: 330px;
+  }
+  h1 {
+    margin: 3rem;
+  }
+  .text_portada {
+    font-size: 1rem;
+    text-align: center;
+    margin: 80px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav_huellitas ul {
+    gap: 90px;
+  }
+  .nav-item {
+    height: 80px;
+    width: 80px;
+  }
+  /*media razas*/
+  #grilla_banner {
+    grid-template-areas: "titulo img_portada" "text_portada img_portada" "text_portada img_portada";
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+  }
+  .img_portada {
+    padding-top: 20px;
+    margin-left: 100px;
+    height: 400px;
+  }
+  h1 {
+    margin: 3rem;
+  }
+  .text_portada {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .img_portada {
+    margin-left: 150px;
+  }
+}
+/*INICIO*/
+.slider {
+  padding-top: 3.6rem;
+}
+
+/*las_razas_mas_buscadas*/
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4658a5;
+  text-align: center;
+  margin: 1rem;
+}
+
+/*Cards*/
+.card-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card_tarjetas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border: none;
+  background-color: ghostwhite;
+  padding: 10px 25px;
+  border-radius: 3%;
+  margin: 10px 0px;
+}
+.card_tarjetas img {
+  width: 60%;
+}
+.card_tarjetas .card-title- {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #06ab78;
+  margin: 0.5rem 0rem;
+}
+.card_tarjetas .card-text- {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 15px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/*RAZA_DESTACADA_DEL_MES*/
+.raza_destacada_del_mes {
+  display: grid;
+  grid-template-rows: 200px 50px 300px;
+  background-color: #F7F5EA;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #06ab78;
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 1.2rem;
+  margin-left: 2.3rem;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  color: #4658a5;
+  text-align: justify;
+  margin: 15px 30px;
+}
+
+@media (min-width: 768px) {
+  .card-conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .raza_destacada_del_mes {
+    grid-template-rows: 200px 50px 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-conteiner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card_tarjetas img {
+    width: 11rem;
+    margin-left: 0.7rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .card-text {
+    font-family: rubik;
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 300;
+    margin: 20px;
+  }
+  .img_golden_dest {
+    width: 45%;
+    margin-left: 370px;
+  }
+  .raza_destacada_del_mes {
+    grid-template-rows: 200px 50px 300px;
+  }
+}
+.body_raza {
+  margin-top: 3.6rem;
+}
+
+.banner_lupa {
+  padding-bottom: 10px;
+}
+
+/*grilla_razas*/
+.nombre_raza {
+  font-size: 1rem;
+  text-align: center;
+  color: #4658a4;
+  padding: 5px;
+}
+
+#grilla_razas {
+  display: grid;
+  grid-template-areas: "img_perro img_perro" "nombre_raza nombre_raza";
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+}
+
+/*MEDIAS*/
+@media (min-width: 768px) {
+  #grilla_razas {
+    grid-template-areas: "img_perro img_perro img_perro img_perro img_perro" "nombre_raza nombre_raza nombre_raza nombre_raza nombre_raza";
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.body_cuidados {
+  margin-top: 3.6rem;
+}
+
+.container_art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.card-container-art {
+  display: block;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.header-card {
+  margin-right: 20px;
+}
+.header-card img {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(6, 171, 120, 0.1);
+  margin: 20px 10px;
+  transition: 0.2s;
+}
+.header-card h4 {
+  color: #06ab78;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.header-card img:hover {
+  box-shadow: 0 0 0 8px rgba(6, 171, 120, 0.3);
+}
+
+.descripcion-art {
+  position: relative;
+  background: #fbfbfb;
+}
+.descripcion-art h5 {
+  color: #eda92e;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  margin: 5px 10px;
+}
+.descripcion-art p {
+  color: #06ab78;
+  text-align: center;
+  margin: 10px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.descripcion-art input {
+  position: relative;
+  margin-left: 150px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 5px;
+  background-color: #06ab78;
+  color: #F7F5EA;
+  border-radius: 10%;
+  border: none;
+}
+
+.header-card, .descripcion-art {
+  padding: 20px 20px 5px 20px;
+  text-align: center;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .card-container-art {
+    display: flex;
+    width: 600px;
+  }
+  .descripcion-art p {
+    margin: 30px 10px;
+  }
+  .descripcion-art input {
+    margin-left: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  .container_art {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px 20px;
+    gap: 5px;
+  }
+  .header-card h4 {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .container_art {
+    margin-left: 60px;
+  }
+}
+.body_alimentacion {
+  margin-top: 3.6rem;
+}
+
+.grid-alim {
+  display: grid;
+  /*width: 80%;
+  height: 500px;*/
+  margin: 30px auto;
+  grid-column: 1fr;
+  grid-template-rows: repeat(3, 1fe);
+  grid-template-areas: "item1 item1 item1" "item2 item2 item2" "item3 item3 item3";
+}
+
+.item1 {
+  grid-area: item1;
+}
+
+.item2 {
+  grid-area: item2;
+}
+
+.item3 {
+  grid-area: item3;
+}
+.item3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+/*articulos*/
+.contenedor_art {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contenedor_art figure {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.contenedor_art figure img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+.contenedor_art figure .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(237, 169, 46, 0.5);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  padding: 10px;
+}
+.contenedor_art figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.contenedor_art h3 {
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.contenedor_art .titulo_capa {
+  color: black;
+}
+.contenedor_art .text_capa {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .contenedor_card_alm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .item3 {
+    grid-area: item3;
+  }
+  .item3 img {
+    width: 80%;
+  }
+}
+@media (min-width: 1440px) {
+  .item3 {
+    grid-area: item3;
+  }
+  .item3 img {
+    width: 50%;
+  }
+}
+.body_adotame {
+  margin-top: 4.5rem;
+}
+
+.grid-adop {
+  max-width: 100%;
+  display: grid;
+  width: 80%;
+  margin: 10px auto;
+  grid-column: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "item_1 item_1 item_1" "item_2 item_2 item_2" "item_3 item_3 item_3";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.item_1 {
+  grid-area: item_1;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.item_1 img {
+  margin-bottom: 15px;
+}
+
+.item_2 {
+  grid-area: item_2;
+}
+.item_2 p {
+  text-align: center;
+  color: rgba(221, 128, 112, 0.7);
+}
+.item_2 h3 {
+  text-align: center;
+  padding-right: 35px;
+  color: #dd8070;
+}
+
+.item_3 {
+  grid-area: item_3;
+  justify-content: center;
+  align-items: center;
+}
+.item_3 img {
+  margin-top: 5px;
+}
+
+.item {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+h4 {
+  font-weight: 600;
+  color: #dd8070;
+  text-align: center;
+  margin: 10px 30px;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 2rem;
+  color: rgba(221, 128, 112, 0.7);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+form .campos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #dd8070;
+}
+
+.form_1 .campos_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.form_1 .campos_1 p {
+  text-align: center;
+}
+.form_1 .campos_1 input {
+  background-color: #dd8070;
+  color: #F7F5EA;
+  border: none;
+  padding: 0.3rem;
+}
+.form_1 .campos_1 .text_camp {
+  color: #dd8070;
+}
+
+@media (min-width: 768px) {
+  .grid-adop {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,124 @@
+.body_adotame {
+    margin-top: 4.5rem;
+}
+
+.grid-adop {
+    max-width: 100%;
+    display: grid;
+    width: 80%;
+    margin: 10px auto;
+    grid-column: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:  
+    "item_1 item_1 item_1"
+    "item_2 item_2 item_2"
+    "item_3 item_3 item_3";
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.item_1 {
+    grid-area: item_1;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin-bottom: 15px;
+    }
+}
+
+.item_2 {
+    grid-area: item_2;
+
+    p {
+    text-align: center;
+    color: rgba(221, 128, 112, 0.7);
+    }
+
+    h3 {
+        text-align: center;
+        padding-right: 35px;
+        color: $salmon;
+    }
+}
+
+.item_3 {
+    grid-area: item_3;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        margin-top: 5px;
+    }
+}
+
+.item {
+    font-size: 2rem;
+    color: #fff;
+    font-family: $fuente-principal;
+    text-align: center;
+}
+
+h4 {
+    font-weight: 600;
+    color: $salmon;
+    text-align: center;
+    margin: 10px 30px;
+}
+
+h5 {
+    font-weight: 500;
+    font-size: $fuente-grande;
+    color: rgba(221, 128, 112, 0.7);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $margen-chico;
+
+    .campos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $salmon;
+    }
+}
+
+.form_1 .campos_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $margen-chico;
+
+    p {
+        text-align: center;
+    }
+
+    input {
+        background-color: $salmon;
+        color: $beige;
+        border: none;
+        padding: $margen-mini;
+    }
+
+    .text_camp {
+        color: $salmon;
+    }
+}
+
+@media (min-width: $tablet) {
+    .grid-adop {
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}

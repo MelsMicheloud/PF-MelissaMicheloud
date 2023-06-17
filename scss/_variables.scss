@@ -1,0 +1,50 @@
+
+/*Paleta de colores*/
+$azul: #4658a5;
+$verde: #06ab78;
+$amarillo: #eda92e;
+$salmon: #dd8070;
+$beige: #F7F5EA;
+
+/*TAMAÑO DE LAS FUNTES*/
+
+$fuente-principal: 'Rubik', sans-serif;
+$fuente-grande: 2rem;
+$fuente-mediana: 1.5rem;
+$fuente-chica: 1rem;
+
+/*TAMAÑO DE MARGENES*/
+$margen-mini: 0.3rem;
+$margen-chico: 1rem;
+$margen-mediano: 2rem;
+$margen-grande: 3rem;
+$margen-XXL: 5rem;
+
+/*Breackpoints*/
+$mobile: 425px;
+$tablet: 768px;
+$desktop: 1200px;
+$desktopL: 1440px;
+
+/*MIXINS*/
+@mixin flex-row-center {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding-top: $margen-mediano;
+        padding-left: 0;
+}
+
+@mixin img-transition {
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(70, 88, 165, .1);
+    transition: .2s;
+}
+
+@mixin li-style {
+    list-style: none;
+    height: 50px;
+    width: 50px;
+}
+

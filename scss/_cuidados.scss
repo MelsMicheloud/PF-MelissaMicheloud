@@ -1,0 +1,135 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.body_cuidados {
+    margin-top: 3.6rem;
+}
+
+.container_art {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $fuente-principal;
+}
+
+.card-container-art {
+    display: block;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, .2 );
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.header-card {
+    margin-right: 20px;
+    
+    img{
+        position:relative;
+        display: block;
+        border-radius: 50%;
+        box-shadow: 0 0 0 8px rgba(6, 171, 120, .1);
+        margin: 20px 10px;
+        transition: .2s;
+    }
+
+    h4 {
+        color: $verde;
+        font-weight: 600;
+        font-size: $fuente-chica;
+        text-align: center;
+    }
+
+}
+
+.header-card img:hover {
+    box-shadow: 0 0 0 8px rgba(6, 171, 120, .3);
+}
+
+
+.descripcion-art {
+    position: relative;
+    background: #fbfbfb;
+
+    h5 {
+        color: $amarillo;
+        font-weight: 500;
+        font-size: $fuente-chica;
+        text-align: center;
+        margin: 5px 10px;
+    }
+    
+    p {
+        color: $verde;
+        text-align: center;
+        margin: 10px 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+    input {
+        position: relative;
+        margin-left: 150px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 5px;
+        background-color: $verde;
+        color: $beige;
+        border-radius: 10%;
+        border: none;
+    }
+}
+
+.header-card, .descripcion-art {
+    padding: 20px 20px 5px 20px;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: $tablet) {
+    .card-container-art {
+        display: flex;
+        width: 600px;
+    }
+
+    .descripcion-art {
+        p {
+            margin: 30px 10px;
+        }
+
+        input {
+            margin-left: 250px;
+        }
+    }
+
+}
+
+@media (min-width: $desktop) {
+    .container_art {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px 20px;
+        gap: 5px;
+    }
+
+    .header-card h4 {
+        font-weight: 400;
+        font-size: $fuente-chica;
+    }
+    
+}
+
+@media (min-width: $desktopL) {
+    .container_art {
+        margin-left: 60px;
+    }
+}
